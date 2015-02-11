@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, random, time, sys, select
+import os, random, sys, select
 
 
 def rndmp3 ():   
