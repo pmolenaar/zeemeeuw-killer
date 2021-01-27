@@ -6,9 +6,9 @@ def rndmp3 ():
 
   while 1:
 	
-    	randomfile = random.choice(os.listdir("/home/pi/music"))
+    	randomfile = random.choice(os.listdir("/home/pi/mp3"))
 	print "Playing file" ,randomfile,"..."
-    	file = ' /home/pi/music/'+ randomfile
+    	file = ' /home/pi/mp3/'+ randomfile
     	os.system ('omxplayer -o local' + file)
 	
 	pause = random.randint(min,max)
