@@ -22,16 +22,19 @@ def toggle_relay():
     print("toggling relay")
     relay.toggle()
 
-	
-
 def rndmp3 ():   
 
   while 1:
+	set_relay(True) #Turn on Amp
+	
+	time.sleep(5) #Wait till Amp has full power
 	
     	randomfile = random.choice(os.listdir("/home/pi/mp3"))
 	print "Playing file" ,randomfile,"..."
     	file = ' /home/pi/mp3/'+ randomfile
     	os.system ('omxplayer -o local' + file)
+	
+	set_relay(False) #Turn Amp off
 	
 	pause = random.randint(min,max)
 	
@@ -51,5 +54,10 @@ max = 35
 
 print "Audio Random Player Runnning. Waiting Time from ",min,"to",max, "seconds."
 
+set_relay(False)
+time.sleep(1)
+set_relay(True)
+time.sleep(1)
+set_relay(False)
 rndmp3 ()
 
