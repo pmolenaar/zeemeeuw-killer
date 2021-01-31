@@ -2,6 +2,7 @@
 import os, random, sys, select, time
 import gpiozero
 import datetime as dt
+from datetime import datetime
 
 # change this value based on which GPIO port the relay is connected to
 RELAY_PIN = 18
@@ -46,12 +47,12 @@ def rndmp3 ():
     	os.system ('omxplayer -o local' + file)
 	set_relay(False) #Turn Amp off
 	
-	timeEnd = datetime.strptime(nightEnd, "%I:%M%p")
-	timeStart = datetime.strptime(nightEegin, "%I:%M%p")
 	now = datetime.now()
-    	currentTime = now.strftime("%I:%M%p")
-	
-	print(isNowInTimePeriod(timeStart, timeEnd, currentTime))
+	timeEnd = datetime.strptime(nightEnd, "%I:%M%p")
+	timeStart = datetime.strptime(nightBegin, "%I:%M%p")
+	timeNow = now.strftime("%I:%M%p")
+ 	
+	print(isNowInTimePeriod(timeStart, timeEnd, timeNow))
  
 	
 	if  isNowInTimePeriod(timeStart, timeEnd, currentTime):
