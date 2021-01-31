@@ -45,7 +45,7 @@ def rndmp3 ():
 	print "Playing file" ,randomfile,"..." 
     	file = ' /home/pi/mp3/'+ randomfile
 #    	os.system ('omxplayer -o local' + file)
-	
+	os.system ('afplay ' + file)	
 	set_relay(False) #Turn Amp off
 	
 	timeEnd = datetime.strptime(nightEnd, "%I:%M%p")
