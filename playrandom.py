@@ -56,7 +56,7 @@ def rndmp3 ():
 	print(isNowInTimePeriod(timeStart, timeEnd, timeNow))
  
 	
-	if  isNowInTimePeriod(timeStart, timeEnd, currentTime):
+	if  isNowInTimePeriod(timeStart, timeEnd, timeNow):
         	print('Night')
         	print(current_time)
         	pause = random.randint(min_slow,max_slow)
