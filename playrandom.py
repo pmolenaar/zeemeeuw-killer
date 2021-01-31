@@ -76,7 +76,7 @@ def rndmp3 ():
 os.system("clear") # Clear Screen
 
 # defining waiting time range
-min_fast = 1800
+min_fast = 1800 # divided by 60 to get minutes (1800 = 30)
 max_fast = 3600
 min_slow = 3600
 max_slow = 7200
