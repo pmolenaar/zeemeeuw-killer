@@ -63,7 +63,7 @@ def rndmp3 ():
     	else:
         	print('Day')
         	print(timeNow)
-		pause = random.randint(min,max)
+		pause = random.randint(min_fast,max_fast)
 	
 	print "Hit Key and press Enter to stop. Waiting for", pause, "seconds"
 	i, o, u = select.select( [sys.stdin], [], [], pause )
