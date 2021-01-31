@@ -1,7 +1,6 @@
-# Random-Audio-Player-for-Raspberry
+# Zeemeeuw-killer-for-Raspberry
 
 Meeuwenverdelger
 
 Required installs:
-sudo apt install python-gpiozero
-sudo apt install omxplayer
+sudo apt install python-gpiozero omxplayer
