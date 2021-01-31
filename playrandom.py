@@ -58,11 +58,11 @@ def rndmp3 ():
 	
 	if  isNowInTimePeriod(timeStart, timeEnd, timeNow):
         	print('Night')
-        	print(current_time)
+        	print(timeNow)
         	pause = random.randint(min_slow,max_slow)
     	else:
         	print('Day')
-        	print(current_time)
+        	print(timeNow)
 		pause = random.randint(min,max)
 	
 	print "Hit Key and press Enter to stop. Waiting for", pause, "seconds"
