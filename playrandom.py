@@ -59,11 +59,11 @@ def rndmp3 ():
 	if  isNowInTimePeriod(timeStart, timeEnd, timeNow):
         	print('Night')
         	print(timeNow)
-        	pause = random.randint(min_slow,max_slow)
+        	pause = random.randint(min_night,max_night)
     	else:
         	print('Day')
         	print(timeNow)
-		pause = random.randint(min_fast,max_fast)
+		pause = random.randint(min_day,max_day)
 	
 	print "Hit Key and press Enter to stop. Waiting for", pause, "seconds"
 	i, o, u = select.select( [sys.stdin], [], [], pause )
@@ -76,10 +76,10 @@ def rndmp3 ():
 os.system("clear") # Clear Screen
 
 # defining waiting time range
-min_fast = 1800 # divided by 60 to get minutes (1800 = 30)
-max_fast = 3600
-min_slow = 3600
-max_slow = 7200
+min_day = 1800 # divided by 60 to get minutes (1800 = 30)
+max_day = 3600
+min_night = 3600
+max_night = 7200
 
 print "Audio Random Player Runnning. Waiting Time from ",min,"to",max, "seconds."
 
