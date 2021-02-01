@@ -75,7 +75,7 @@ def rndmp3 ():
 
 os.system("clear") # Clear Screen
 
-# defining waiting time range
+# minimum and maximum range of randomized interval night & day
 min_day = 1800 # divided by 60 to get minutes (1800 = 30)
 max_day = 3600
 min_night = 3600
