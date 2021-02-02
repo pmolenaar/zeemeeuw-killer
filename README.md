@@ -3,4 +3,4 @@
 Meeuwenverdelger
 
 Required installs:
-sudo apt install python-gpiozero omxplayer
+sudo apt install python-gpiozero omxplayer fonts-freefont-ttf
