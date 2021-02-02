@@ -41,9 +41,9 @@ def rndmp3 ():
 	
 	time.sleep(5) #Wait till Amp has full power
 	
-    	randomfile = random.choice(os.listdir("/home/pi/mp3")) #Pick a random gullfucker sound
+    	randomfile = random.choice(os.listdir("./mp3")) #Pick a random gullfucker sound
 	print "Playing file" ,randomfile,"..." 
-    	file = ' /home/pi/mp3/'+ randomfile
+    	file = ' ./mp3/'+ randomfile
     	os.system ('omxplayer -o local' + file)
 	set_relay(False) #Turn Amp off
 	
