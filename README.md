@@ -1,4 +1,4 @@
-# Zeemeeuw-killer-for-Raspberry
+# Zeemeeuw-killer
 
 Meeuwenverdelger
 
