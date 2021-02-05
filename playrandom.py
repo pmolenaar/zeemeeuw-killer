@@ -3,6 +3,7 @@ import os, random, sys, select, time
 import gpiozero
 import datetime as dt
 from datetime import datetime
+import logging
 
 # change this value based on which GPIO port the relay is connected to
 RELAY_PIN = 18
@@ -37,6 +38,8 @@ def toggle_relay():
 def rndmp3 ():   
 
   while 1:
+	#logging.basicConfig(filename='gull.log', level=logging.INFO)
+	
 	set_relay(True) #Turn on Amp
 	
 	time.sleep(5) #Wait till Amp has full power
