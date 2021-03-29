@@ -47,7 +47,7 @@ def rndmp3 ():
     	randomfile = random.choice(os.listdir("./mp3")) #Pick a random gullfucker sound
 	print "Playing file" ,randomfile,"..." 
     	file = ' ./mp3/'+ randomfile
-    	os.system ('omxplayer -o local' + file)
+    	os.system ('mpg123 ' + file)
 	set_relay(False) #Turn Amp off
 	
 	now = datetime.now()
@@ -60,36 +60,30 @@ def rndmp3 ():
  
 	
 	if  isNowInTimePeriod(timeStart, timeEnd, timeNow):
-        	print('Night')
-        	print(timeNow)
-        	pause = random.randint(min_night,max_night)
+        	x = random.randint(3600,7200)
+		print("Starting Nighttime Countdown!")
+		while x>0:
+			sys.stdout.write("\r" + str(x))
+			sys.stdout.flush()
+			time.sleep(1)
+			x-=1
+		print(" ")
+		print("Playing!")
     	else:
-        	print('Day')
-        	print(timeNow)
-		pause = random.randint(min_day,max_day)
+		x = random.randint(1800,3600)
+                print("Starting Daytime Countdown!")
+                while x>0:
+                        sys.stdout.write("\r" + str(x))
+                        sys.stdout.flush()
+                        time.sleep(1)
+                        x-=1
+		print(" ")
+                print("Playing!")
+
 	
-	print "Hit Key and press Enter to stop. Waiting for", pause, "seconds"
-	i, o, u = select.select( [sys.stdin], [], [], pause )
-	if (i):
-		print "STOPPED", sys.stdin.readline().strip()
-		break
-	else:
-		print "next"
-
-os.system("clear") # Clear Screen
-
-# minimum and maximum range of randomized interval night & day
-min_day = 1800 # divided by 60 to get minutes (1800 = 30)
-max_day = 3600
-min_night = 3600
-max_night = 7200
-
-print "Audio Random Player Runnning. Waiting Time from ",min,"to",max, "seconds."
-
 set_relay(False)
 time.sleep(1)
 set_relay(True)
 time.sleep(1)
 set_relay(False)
 rndmp3 ()
-
