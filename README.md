@@ -3,7 +3,6 @@
 Meeuwenverdelger
 
 Required installs:
-sudo apt install python-gpiozero omxplayer fonts-freefont-ttf
+sudo apt install python-gpiozero mpg123
 
-sudo crontab -e
-@reboot cd /home/pi/zeemeeuw-killer && python randomplay.py
+sudo cp seagull.service /etc/systemd/system
