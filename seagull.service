@@ -5,8 +5,8 @@ Conflicts=getty@tty1.service
 
 [Service]
 Type=simple
-WorkingDirectory=
-ExecStart=/usr/bin/python3 /usr/bin/dummy_service.py
+WorkingDirectory=/home/pi/zeemeeuw-killer
+ExecStart=/usr/bin/python /home/pi/zeemeeuw-killer/playrandom.py
 StandardInput=tty-force
 
 [Install]
