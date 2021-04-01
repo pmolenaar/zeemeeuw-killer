@@ -47,7 +47,7 @@ def rndmp3 ():
     	randomfile = random.choice(os.listdir("./mp3")) #Pick a random gullfucker sound
 	print "Playing file" ,randomfile,"..." 
     	file = ' ./mp3/'+ randomfile
-    	os.system ('mpg123 ' + file)
+    	os.system ('mpg123 -q ' + file)
 	set_relay(False) #Turn Amp off
 	
 	now = datetime.now()
