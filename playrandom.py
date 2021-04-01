@@ -56,7 +56,7 @@ def rndmp3 ():
 	timeNow = now.strftime("%I:%M%p")
 	timeNow = datetime.strptime(timeNow, "%I:%M%p")
  	
-	print(isNowInTimePeriod(timeStart, timeEnd, timeNow))
+#	print(isNowInTimePeriod(timeStart, timeEnd, timeNow))
  
 	
 	if  isNowInTimePeriod(timeStart, timeEnd, timeNow):
