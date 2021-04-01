@@ -60,7 +60,7 @@ def rndmp3 ():
  
 	
 	if  isNowInTimePeriod(timeStart, timeEnd, timeNow):
-        	x = random.randint(3600,7200)
+        	x = random.randint(7200,14400)
 		print("Starting Nighttime Countdown!")
 		while x>0:
 			sys.stdout.write("\r" + str(x))
@@ -81,6 +81,10 @@ def rndmp3 ():
                 print("Playing!")
 
 	
+set_relay(False)
+time.sleep(1)
+set_relay(True)
+time.sleep(1)
 set_relay(False)
 time.sleep(1)
 set_relay(True)
